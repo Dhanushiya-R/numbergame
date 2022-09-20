@@ -1,0 +1,26 @@
+#!/bin/bash
+echo "Choose Rock(0), Paper(1), Scissors(2)"
+echo "player1 choice"
+read PLAYER1
+echo "player2 choice:"
+read PLAYER2
+choices=("R" "P" "S") 
+if [[ $PLAYER1 = R && $PLAYER2 = P ]]
+    then echo "i have paper , i win";
+elif [[ $PLAYER1 = P && $PLAYER2= P ]]
+    then echo "i have paper , we draw";
+elif [[ $PLAYER1 = S && $PLAYER2 = P ]]
+    then echo "i have paper , you win, bye bye";
+elif [[ $PLAYER1 = R && $PLAYER2 = R ]]
+    then echo "i have rock , we draw";
+elif [[ $PLAYER1 = P && $PLAYER2 = R ]]
+    then echo "i have rock , you win, bye bye";
+elif [[ $PLAYER1 = S && $PLAYER2 = R ]]
+    then echo "i have rock , i win";
+elif [[ $PLAYER1 = R && $PLAYER2= S ]]
+    then echo "i have scissors, you win, bye bye";
+elif [[$count = 0 && $PLAYER1 = P && $PLAYER2 = S ]]
+    then echo "i have scissors, i win";
+elif [[$count = 0 && $PLAYER1 = S && $PLAYER2 = S ]]
+    then echo "i have scissors, we draw "
+fi
